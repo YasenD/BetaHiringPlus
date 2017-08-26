@@ -1,0 +1,82 @@
+.dashboard-title-container {
+  padding: 25px 0;
+  text-align: center;
+}
+
+.dashboard-card {
+  margin: 0 30px;
+}
+
+.dashboard-card md-card {
+  padding: 0;
+}
+
+.dashboard-card .card-top {
+  width: 100%;
+  height: 150px;
+  text-align: center;
+}
+
+.dashboard-card .candidate-card .card-top {
+  background: #a79be5;
+}
+
+.dashboard-card .note-card .card-top {
+  background: #54ca95;
+}
+
+.dashboard-card .reminder-card .card-top {
+  background: #ffa375;
+}
+
+.dashboard-card .card-top img {
+  margin-top: 30px;
+}
+
+.dashboard-card md-card-content {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.dashboard-card md-card-content .content {
+  font-size: 40px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  padding: 0 25px;
+}
+
+.dashboard-card md-card-content .content .notification {
+  display: none;
+}
+
+.dashboard-card md-card-content .content .notification.active {
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    border-radius: 50px;
+ 
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: white;
+}
+
+.dashboard-card .candidate-card md-card-content .content .notification {
+   background: #54ca95;
+}
+
+.dashboard-card .note-card md-card-content .content .notification {
+   background: #a79be5;
+}
+
+.dashboard-card .reminder-card md-card-content .content .notification {
+   background: #ffa375;
+}
+
+.dashboard-card md-card-content .title {
+  color: #818181;
+  padding: 15px 0;
+}

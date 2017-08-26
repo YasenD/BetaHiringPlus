@@ -1,0 +1,96 @@
+.add-job-textarea,
+.add-job-input,
+.add-job-select {
+  border: 1px solid #E6E7E7;
+  border-radius: 3px;
+  padding-left: 10px;
+}
+
+.add-job-page {
+  min-width: 950px;
+}
+
+.add-job-page .detail-page-main {
+  padding: 60px 120px;
+  padding-bottom: 100px;
+}
+
+.mat-input-container {
+  width: 100%;
+}
+
+.add-job-column {
+  display: inline-block;
+  width: 46.5%;
+}
+
+.add-job-column:nth-child(2) {
+  float: right;
+}
+
+.save-button {
+  background-color: #54CA95;
+  color: white;
+  float: right;
+  margin-top: 10px;
+}
+
+.add-job-input {
+  min-height: 30px;
+}
+
+.add-job-textarea textarea {
+  min-height: 150px;
+}
+
+.input-block .mat-input-container {
+  display: inline-block;
+  width: 45%;
+}
+
+.input-block .mat-input-container:nth-child(2) {
+  float: right;
+}
+
+.detail-page-label {
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.add-job-select {
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.add-job-checkbox {
+  margin-top: 2.8em;
+  display: inline-block;
+  margin-right: 3%;
+}
+
+.add-job-checkbox:last-child {
+  margin-right: 0;
+}
+
+.add-job-row {
+  clear: both;
+}
+
+.add-job-skill-wrapper {
+  display: flex;
+}
+
+.add-job-skill-wrapper .add-job-input {
+  margin: 3px 0;
+}
+
+.add-job-skill-wrapper .detail-page-label {
+  margin: 0;
+  line-height: 45px;
+  min-width: 5em;
+}
+
+.add-job-responsibilities-textarea textarea {
+  min-height: 300px;
+}

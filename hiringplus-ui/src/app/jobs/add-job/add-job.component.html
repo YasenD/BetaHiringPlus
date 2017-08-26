@@ -1,0 +1,119 @@
+<div class="detail-page add-job-page">
+  <div class="detail-page-header">
+    <a href="/job" class="back-to-listing"><span class="listing-arrow"><</span> Go back to Job Listing</a>
+    <h1 class="detail-page-title">Add a New Job</h1>
+  </div>
+
+  <div class="detail-page-main">
+    <div class="add-job-company-name-block">
+      <div class="detail-page-label">Company Name</div>
+      <md-input-container class="">
+        <input mdInput class="add-job-input" [(ngModel)]="model.companyName">
+      </md-input-container>
+    </div>
+
+    <div class="add-job-row">
+      <div class="add-job-column">
+        <div class="detail-page-label">Title <span class="detail-page-sublabel">(i.e: Software Engineer)</span></div>
+        <md-input-container class="">
+          <input mdInput class="add-job-input" [(ngModel)]="model.jobTitle">
+        </md-input-container>
+      </div>
+      <div class="add-job-column">
+        <div class="detail-page-label">Department <span class="detail-page-sublabel">(i.e: Engineering)</span></div>
+        <md-input-container class="">
+          <input mdInput class="add-job-input" [(ngModel)]="model.department">
+        </md-input-container>
+      </div>
+    </div>
+
+    <div class="add-job-row">
+      <div class="add-job-column">
+        <div class="detail-page-label">Location <span class="detail-page-sublabel">(City)</span></div>
+        <md-input-container class="">
+          <input mdInput class="add-job-input" [(ngModel)]="model.location">
+        </md-input-container>
+      </div>
+      <div class="add-job-column">
+        <md-checkbox class="add-job-checkbox" [(ngModel)]="model.remote">Remote</md-checkbox>
+        <md-checkbox class="add-job-checkbox" [(ngModel)]="model.we">W2</md-checkbox>
+        <md-checkbox class="add-job-checkbox" [(ngModel)]="model.visa">Visa</md-checkbox>
+        <md-checkbox class="add-job-checkbox" [(ngModel)]="model.fullTime">Fulltime</md-checkbox>
+      </div>
+    </div>
+
+    <div class="add-job-row">
+      <div class="add-job-column">
+        <div class="detail-page-label">Responsibilities</div>
+        <md-input-container class="add-job-textarea add-job-responsibilities-textarea">
+          <textarea mdInput [(ngModel)]="model.responsibilities"></textarea>
+        </md-input-container>
+      </div>
+      <div class="add-job-column">
+        <div class="detail-page-label">Desired Skills</div>
+
+        <div class="add-job-skill-wrapper">
+          <span class="detail-page-label">Skill 1: </span>
+          <input mdInput class="add-job-input" [(ngModel)]="skill1">
+        </div>
+
+        <div class="add-job-skill-wrapper">
+          <span class="detail-page-label">Skill 2: </span>
+          <input mdInput class="add-job-input" [(ngModel)]="skill2">
+        </div>
+
+        <div class="add-job-skill-wrapper">
+          <span class="detail-page-label">Skill 3: </span>
+          <input mdInput class="add-job-input" [(ngModel)]="skill3">
+        </div>
+
+        <div class="add-job-skill-wrapper">
+          <span class="detail-page-label">Skill 4: </span>
+          <input mdInput class="add-job-input" [(ngModel)]="skill4">
+        </div>
+
+        <div class="add-job-skill-wrapper">
+          <span class="detail-page-label">Skill 5: </span>
+          <input mdInput class="add-job-input" [(ngModel)]="skill5">
+        </div>
+
+        <div class="add-job-skill-wrapper">
+          <span class="detail-page-label">Skill 6: </span>
+          <input mdInput class="add-job-input" [(ngModel)]="skill6">
+        </div>
+
+        <div class="add-job-skill-wrapper">
+          <span class="detail-page-label">Skill 7: </span>
+          <input mdInput class="add-job-input" [(ngModel)]="skill7">
+        </div>
+      </div>
+    </div>
+
+    <div class="add-job-row">
+      <div class="add-job-column">
+        <div class="detail-page-label">Benefits</div>
+        <md-input-container class="add-job-textarea">
+          <textarea mdInput [(ngModel)]="model.benefits"></textarea>
+        </md-input-container>
+      </div>
+      <div class="add-job-column">
+        <div class="detail-page-label">Salary</div>
+        <div class="input-block">
+          <md-input-container class="">
+            <input mdInput placeholder="Min" class="add-job-input" [(ngModel)]="model.minSalary">
+          </md-input-container>
+          <md-input-container class="">
+            <input mdInput placeholder="Max" class="add-job-input" [(ngModel)]="model.maxSalary">
+          </md-input-container>
+        </div>
+        <div class="detail-page-label">Rounds of Interviews</div>
+        <md-select class="add-job-select">
+          <md-option>3 rounds</md-option>
+        </md-select>
+      </div>
+    </div>
+    <button (click)="saveJob()" md-button class="save-button">SAVE</button>
+
+  </div>
+
+</div>

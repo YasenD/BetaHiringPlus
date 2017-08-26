@@ -1,0 +1,154 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/* You can add global styles to this file, and also import other style files */
+html {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scrollbar: hidden;
+}
+body {
+  width:100%;
+  margin: 0 auto;
+  background-color: #F5F7FA
+}
+.mat-input-underline {
+  display: none !important;
+}
+
+.editable-field .mat-input-underline {
+  display: block !important;
+  position: initial;
+}
+
+.mat-input-underline .mat-input-ripple.mat-input-ripple {
+  top: inherit;
+}
+
+.editable-field .mat-input-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.candidate-row.mat-list-item .mat-list-item-content.mat-ripple {
+  overflow: visible;
+}
+
+.candidate-row.mat-list-item .mat-list-item-content.mat-ripple:hover {
+  background: none;
+}
+
+.mat-nav-list.job-list .mat-list-item .mat-list-item-content.mat-list-item-content {
+  height: 90px;
+}
+
+.mat-nav-list.job-list .mat-list-item-content:hover {
+  background-color: #F9FBFF;
+}
+
+.mat-nav-list.recommended-list .mat-list-item .mat-list-item-content {
+  display: block;
+}
+
+.detail-page {
+  width: 80%;
+  margin: 0 auto;
+  color: #7A7A7A;
+}
+
+.detail-page-sublabel {
+  color: #7A7A7A;
+  font-size: small;
+}
+
+.detail-page-title {
+  color: #384470;
+  text-align: center;
+}
+
+.detail-page-header {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.detail-page-main {
+  border-radius: 3px;
+  background: white;
+  border: 1px solid #E6E7E7;
+}
+
+.detail-page-label {
+  font-weight: bold;
+  color: #384470;
+}
+
+.detail-page .mat-input-wrapper {
+  margin: 0;
+}
+
+.add-job-page .mat-input-placeholder-wrapper {
+  left: 10px;
+  top: -0.7em;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #54CA95;
+}
+
+.back-to-listing {
+  position: absolute;
+  left: 10%;
+  line-height: 38px;
+  color: #7A7A7A;
+  text-decoration: none;
+}
+
+.job-list-page .mat-select-value-text {
+  margin-left: 3px;
+}
+
+.profile-page .mat-tab-label-container {
+  margin: 10px 5% 2px;
+}
+
+.profile-page .mat-tab-label.mat-tab-label {
+  display: inline-block;
+  background: #3abf9c;
+  color: white;
+  width: 120px;
+  min-width: 120px;
+  text-align: center;
+  margin-right: 1px;
+  opacity: 1;
+  height: 32px;
+  line-height: 32px;
+}
+
+.profile-page .mat-tab-label-active.mat-tab-label-active {
+  background: #384470;
+}
+
+.profile-page .mat-tab-label img {
+  margin: 0 12px;
+}
+
+.profile-page .mat-tab-label:last-child img {
+  vertical-align: sub;
+}
+
+.profile-page .mat-tab-list .mat-ink-bar {
+  display: none;
+}
+
+.profile-page .mat-tab-header {
+  border: none;
+}
+
+.profile-page .mat-tab-body-content,
+.profile-page .mat-tab-body-wrapper.mat-tab-body-wrapper,
+.profile-page .mat-tab-body.mat-tab-body.mat-tab-body,
+.profile-page .mat-tab-body.mat-tab-body.mat-tab-body.mat-tab-body-active {
+  overflow: visible;
+}

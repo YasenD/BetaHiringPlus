@@ -1,0 +1,140 @@
+<div class="page profile-page">
+  <div class="bak-button"><i class="material-icons">keyboard_backspace</i><a (click)="onBack()">Back</a></div>
+
+  <md-tab-group>
+    <md-tab>
+      <ng-template md-tab-label class="test">
+        <img src="../../../assets/icons/profile-icon.png" />Profile
+      </ng-template>
+      <div class="details" *ngIf="candidate">
+        <div class="page-left">
+          <div class="current-position" *ngIf="candidate.experienceDetails[0].title && candidate.experienceDetails[0].companyName">{{candidate.experienceDetails[0].title}} at {{candidate.experienceDetails[0].companyName}}</div>
+          <div class="name-location">
+            <div class="title">{{candidate.name}}</div>
+            <div class="location">{{candidate.location}}</div>
+          </div>
+
+          <div class="section section-shortlist">
+            <div class="title">Shortlisted for Jobs</div>
+            <md-chip-list class="shortlist-tags">
+              <md-chip *ngFor="let job of candidate.jobs">{{job.jobTitle}}</md-chip>
+            </md-chip-list>
+            <md-select class="shortlist-select" placeholder="Select Job..." floatPlaceholder="never"
+                       (change)="onShortlist($event)" [(ngModel)]="shortlistSelect">
+              <md-option *ngFor="let job of jobs" [value]="job.id">
+                {{job.jobTitle}}
+              </md-option>
+            </md-select>
+          </div>
+
+          <div class="contacts">
+            <ul>
+              <li>
+                <i class="material-icons contact-item">mail</i>
+                <md-input-container class="editable-field">
+                  <input mdInput [(ngModel)]="candidate.email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" (change)="onEditableFieldChange($event, 'email');">
+                </md-input-container>
+              </li>
+              <li>
+                <i class="material-icons contact-item">phone</i>
+                <md-input-container class="editable-field">
+                  <input mdInput [(ngModel)]="candidate.phone" pattern="(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}" (change)="onEditableFieldChange($event, 'phone');">
+                </md-input-container>
+              </li>
+              <li *ngIf="candidate.name"><img class="contact-item" src="../../../assets/icons/twitter@3x.png"><span>{{candidate.name}}</span></li>
+              <li *ngIf="candidate.website"><i class="material-icons contact-item">public</i><span>{{candidate.website}}</span></li>
+            </ul>
+          </div>
+          <div class="section" *ngIf="candidate.skills">
+            <div class="title">Top Skills</div>
+            <ul class="top-skills" *ngFor="let skill of candidate.skills">
+              <li class="skill">{{skill.name}}</li>
+            </ul>
+          </div>
+          <div class="work-education-section work-experience" *ngIf="candidate.experienceDetails">
+            <div class="title">Work Experience</div>
+            <div class="items" *ngFor="let exp of candidate.experienceDetails">
+              <div class="timesheets">
+                <div class="item-title" *ngIf="exp.title">{{exp.title}}</div>
+                <div class="timespent">
+                  <span>{{exp.companyName}}</span>
+                  <span>{{exp.timePeriod}}<span *ngIf="exp.location">, {{exp.location}}</span></span>
+                </div>
+              </div>
+              <div class="logo" *ngIf="exp.logo">
+                <img src="../../../assets/icons/twitter@3x.png" />
+              </div>
+            </div>
+          </div>
+          <div class="section section-education" *ngIf="candidate.educationDetails">
+            <div class="title">Education</div>
+            <div class="items" *ngFor="let education of candidate.educationDetails">
+              <div class="timesheets" *ngIf="education.title">
+                <div class="item-title">{{education.title}}</div>
+                <div class="timespent">
+                  <span>{{education.datesAttended}}</span>
+                  <span>{{education.fieldsOfStudy}}</span>
+                </div>
+              </div>
+              <div class="logo" *ngIf="education.logo">
+                <img src="../../../assets/icons/twitter@3x.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-right">
+          <div class="notify-section">
+            <a href="javascript:;"><i class="material-icons">more_horiz</i></a>
+            <a href="javascript:;"><i class="material-icons">notifications_none</i></a>
+            <a href="javascript:;"><i class="material-icons">star_border</i></a>
+          </div>
+          <div class="notes-section">
+            <hp-notes [notes]="candidate.notes" (newNote)="onNewNote($event)"></hp-notes>
+          </div>
+          <div class="emails-section">
+            <hp-emails></hp-emails>
+          </div>
+        </div>
+      </div>
+    </md-tab>
+    <md-tab>
+      <ng-template md-tab-label>
+        <img src="../../../assets/icons/linkedin-icon.png" />LinkedIn
+      </ng-template>
+      <div class="details linkedin-details">
+        <h1>No LinkedIn Profile</h1>
+      </div>
+    </md-tab>
+    <md-tab>
+      <ng-template md-tab-label>
+        <img src="../../../assets/icons/resume-icon.png" />Résumé
+      </ng-template>
+      <div class="details resume-details">
+        <div class="upload-file-container">
+          <div *ngIf="candidate && !candidate.resumeUrl">
+            <input id="uploadResumeInput" type="file" class="add-job-input">
+            <button md-button
+                    fxFlex
+                    class="upload-browse-button"
+                    onclick="document.getElementById('uploadResumeInput').click()">BROWSE
+            </button
+            ><button md-button fxFlex class="upload-upload-button" (click)="uploadResume()">UPLOAD</button>
+          </div>
+          <div *ngIf="candidate && candidate.resumeUrl">
+            <span class="upload-file-name">{{candidate.resumeUrl}}</span>
+            <md-icon (click)="clearResume()">delete_forever</md-icon>
+          </div>
+        </div>
+        <h1 *ngIf="!candidate || !candidate.resumeUrl">No Résumé</h1>
+        <pdf-viewer
+          *ngIf="candidate && candidate.resumeUrl"
+          [src]=" candidate.resumeUrl"
+          [page]="page"
+          [original-size]="true"
+          style="display: block;"
+        ></pdf-viewer>
+      </div>
+    </md-tab>
+  </md-tab-group>
+
+</div>

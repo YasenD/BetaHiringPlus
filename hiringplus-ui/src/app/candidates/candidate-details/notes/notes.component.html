@@ -1,0 +1,19 @@
+<div class="notes-title">
+  <span class="note-heading">Notes</span>
+</div>
+<div class="notes-text" flexLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+  <md-input-container class="notes-container" fxFlex>
+    <input mdInput [(ngModel)]="newNoteContent" placeholder="Write a note">
+  </md-input-container>
+  <div class="save-button">
+    <button md-button (click)="saveNote()" fxFlex>SAVE</button>
+  </div>
+</div>
+<div class="past-notes-list">
+  <div class="past-notes" *ngFor="let note of notes">
+    <span class="past-note-text">{{note.content}}</span>
+    <span class="past-note-timestamp">{{note.createdAt | date: 'ddMMMyyyy'}}
+              by {{note.createdBy.firstName}} {{note.createdBy.lastName}}</span>
+  </div>
+</div>
+

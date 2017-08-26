@@ -1,0 +1,71 @@
+div.past-notes-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+div.past-notes {
+  min-height: 60px;
+  border-bottom: 1px solid #BCBCBC;
+}
+
+span.past-note-text {
+  padding-top: 20px;
+  max-width: 380px;
+  padding-left: 25px;
+  display: inline-block;
+  word-wrap: break-word;
+  color:#3A3A3A;
+  font-size: 14px;
+}
+
+span.past-note-timestamp {
+  color: #818181;
+  font-size: 12px;
+  display: block;
+  line-height: normal;
+  vertical-align: bottom;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+div.notes-title {
+  background-color: #F1F1F1;
+  line-height: 60px;
+  text-align: left;
+}
+
+span.note-heading {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  padding-left: 25px;
+  color: #2E2E2E;
+}
+
+div.notes-text {
+  min-height: 60px;
+  line-height: 60px;
+  text-align: left;
+  color: #3A3A3A;
+  border-bottom: 1px solid #BCBCBC;
+  background: #fbfbfb;
+  padding: 0 10px;
+}
+
+div.notes-text .save-button {
+  display: inline-block;
+  text-align: right;
+  width: 30%;
+}
+
+div.notes-text .save-button button {
+  background: #3abf9c;
+  color: white;
+  font-size: 16px;
+}
+.notes-container{
+  padding-left: 15px;
+  width: 60%;
+}
+
+

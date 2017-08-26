@@ -1,0 +1,101 @@
+<div class="job-details-page detail-page">
+  <div class="job-details-page-header detail-page-header">
+    <a href="/job" class="back-to-listing"><span class="listing-arrow"></span> Go back to Job Listing</a>
+    <h1 class="job-list-title detail-page-title">Jobs</h1>
+    <a href="/add-job" md-button class="add-job">+ ADD JOB</a>
+  </div>
+
+  <div class="detail-page-main job-details-main">
+    <div class="job-details-left">
+      <div class="job-details-info">
+        <div class="job-list-date">
+          <i class="material-icons published">check_circle</i>
+          <span>Updated:</span>
+          {{job?.updatedAt | date: 'MM/dd/yyyy'}}
+        </div>
+        <div class="job-title detail-page-label">{{job?.jobTitle}}</div>
+        <div class="job-department">{{job?.department}}</div>
+      </div>
+      <div class="job-location">
+        <div class="job-location-description">
+          <span class="job-left-label detail-page-label">Location:</span> {{job?.location}}
+        </div>
+        <div class="job-location-attributes">
+          {{job?.visa}}, {{job?.fullTime}}
+        </div>
+      </div>
+      <div class="job-salary">
+        <span class="job-left-label detail-page-label">Salary:</span> ${{job?.minSalary}} - ${{job?.maxSalary}}
+      </div>
+      <div class="job-details-description">
+        <span class="job-left-label detail-page-label">Responsibilities:</span> <div class="responsibility">{{job?.responsibilities}}</div>
+      </div>
+      <div class="job-details-description">
+        <span class="job-left-label detail-page-label">Desired Skills:</span>
+        <div *ngIf="job?.skills" class="job-details-skill-list">
+          <div *ngFor="let skill of job.skills">— {{skill.name}}</div>
+        </div>
+      </div>
+      <div class="job-details-description">
+        <span class="job-left-label detail-page-label">Benefits:</span> {{job?.benefits}}
+      </div>
+    </div>
+    <div class="job-details-right">
+      <div class="applied-candidiates">
+        <div class="job-details-candidates-counter">
+          <img src="../../assets/candidates.png" />
+          <div class="counter-text">
+              <div class="counter-number  candidates-num">{{job?.shortlistedCandidates?.length}}</div> Candidates
+          </div>
+        </div>
+        <div class="details-candidate-list-header">
+          <span class="job-right-label">
+          Candidates:
+          </span>
+          <span class="job-right-label">
+          Interviews:
+          </span>
+        </div>
+
+        <div class="details-candidate-list" *ngIf="!job?.shortlistedCandidates?.length">
+          People haven't applied to this job yet.
+        </div>
+
+        <div class="candidate-list">
+          <md-nav-list>
+            <md-list-item class="shortlisted-list"
+                          *ngFor="let sCandidate of job?.shortlistedCandidates"
+                          (click)="goToCandidate(sCandidate.id)">
+              <div class="recommended-avatar"></div>
+              <div class="recommended-info">
+                <div class="job-details-recommended-name">{{sCandidate?.name}}</div>
+                <div>{{sCandidate?.location}}</div>
+              </div>
+            </md-list-item>
+        </md-nav-list>
+        </div>
+      </div>
+      
+      <h3 class="job-details-recommended-title detail-page-title"><span class="counter-number recom-candidates-num">{{job?.recommendedCandidates?.length}}</span>  Recommended Candidates</h3>
+      
+      <div class="details-candidate-list" *ngIf="!job?.recommendedCandidates?.length">
+        No Recommended Candidates
+      </div>
+
+      <md-nav-list class="">
+        <md-list-item class="shortlisted-list"
+                      *ngFor="let rec of job?.recommendedCandidates"
+                      (click)="goToCandidate(rec.id)">
+          <div class="recommended-avatar"></div>
+          <div class="recommended-info">
+            <div class="job-details-recommended-name">{{rec?.name}}</div>
+            <div>{{rec?.location}}</div>
+          </div>
+        </md-list-item>
+      </md-nav-list>
+      
+    </div>
+
+  </div>
+  
+</div>

@@ -1,0 +1,101 @@
+body {
+  background: #F5F7FA;
+}
+
+.job-list-page {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.job-list-title, .job-title {
+  color: #384470;
+}
+
+.job-list-title {
+  text-align: center;
+}
+
+.add-job {
+  background-color: #54CA95;
+  color: white;
+  float: right;
+}
+
+.job-list-page-header {
+  margin: 10px 0;
+  line-height: 36px;
+}
+
+.job-list-row {
+  height: 90px;
+  margin-top: 8px;
+  color: #7A7A7A;
+}
+
+.job-list-row,
+.job-list-select {
+  border: 1px solid #E6E7E7;
+  border-radius: 3px;
+  background: white;
+}
+
+.job-list-select {
+  margin-right: 20px;
+}
+
+.job-list-candidates-number {
+  font-weight: bold;
+  font-size: x-large;
+  color: #8175BF;
+  display: inline-block;
+}
+
+.job-list-candidates-label {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.column1 {
+  width: 45%;
+}
+
+.job-title {
+  font-weight: bold;
+}
+
+.column2 {
+  width: 35%;
+}
+
+.job-list-date {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.job-status-indicator {
+  border-radius: 50%;
+  background-color: #54CA95;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.published {
+  font-size: 36px;
+  vertical-align: middle;
+  color: #54CA95;
+  margin-right: 10px;
+}
+
+.job-title i {
+  margin-right: 5px;
+}
+
+.job-department {
+  margin-left: 28px;
+}

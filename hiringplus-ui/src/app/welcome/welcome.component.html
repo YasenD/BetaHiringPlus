@@ -1,0 +1,47 @@
+<div class="dashboard-title-container">
+  <h1 class="dashboard-title">Dashboard</h1>
+</div>
+
+<div class="dashboard-container">
+  <div flexLayout='row'>
+    <div fxFlex="10%"></div>
+    <div fxFlex>
+      <div flexLayout="row">
+        <div fxFlex class="dashboard-card">
+          <md-card class="candidate-card">
+            <div class="card-top">
+              <img src="../../assets/candidates.png" />
+            </div>
+            <md-card-content>
+              <div class="content"><span class="notification">8</span>{{ dashboardData?.candidates }}</div>
+              <div class="title">CANDIDATES</div>
+            </md-card-content>
+          </md-card>
+        </div>
+        <div fxFlex class="dashboard-card">
+          <md-card class="note-card">
+            <div class="card-top">
+              <img src="../../assets/notes.png" />
+            </div>
+            <md-card-content>
+              <div class="content"><span class="notification">8</span>{{ dashboardData?.notes }}</div>
+              <div class="title">NOTES</div>
+            </md-card-content>
+          </md-card>
+        </div>
+        <div fxFlex class="dashboard-card">
+          <md-card class="reminder-card">
+            <div class="card-top">
+              <img src="../../assets/reminders.png" />
+            </div>
+            <md-card-content>
+              <div class="content"><span class="notification">8</span>{{ dashboardData?.reminders }}</div>
+              <div class="title">REMINDERS</div>
+            </md-card-content>
+          </md-card>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="10%"></div>
+  </div>
+</div>

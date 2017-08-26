@@ -1,0 +1,63 @@
+.reminder-arrow-up {
+  position: absolute;
+  z-index: 3;
+  top: 32px;
+
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+
+  border-bottom: 8px solid #a9a9a9;
+}
+
+.reminder-container {
+  position: relative;
+}
+
+.reminder-icon {
+  width: 16px;
+  height: 20px;
+}
+
+.reminder-popover {
+  position: absolute;
+  z-index: 3;
+  top: 30px;
+  left: -65px;
+  width: 140px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #a9a9a9;
+  border-radius: 5px;
+
+  text-align: center;
+}
+
+.reminder-item {
+  padding: 14px 5px;
+  border-bottom: 1px solid #ddd;
+  margin: -2px 20px;
+}
+
+.reminder-item-container:last-child .reminder-item {
+  border-bottom: none;
+}
+
+.reminder-item-container:hover {
+  background: rgba(0,0,0,.04);
+}
+
+.reminder-item .mat-input-wrapper {
+  margin: 0;
+}
+
+.reminder-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}

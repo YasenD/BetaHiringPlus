@@ -1,0 +1,24 @@
+<div class="reminder-arrow-up" *ngIf="popoverVisible"></div>
+<div class="reminder-container">
+  <img (click)="onIconClick($event)"
+       mdTooltip="{{displayValue}}"
+       src="{{value ? '../../../assets/reminder-active@3x.png' : '../../../assets/reminder_3x-2.png'}}"
+       class="reminder-icon">
+  <div class="reminder-popover" *ngIf="popoverVisible">
+    <div class="reminder-item-container">
+      <div class="reminder-item" (click)="onTomorrowClick()">Tomorrow</div>
+    </div>
+    <div class="reminder-item-container">
+      <div class="reminder-item" (click)="onOneWeekClick()">1 week</div>
+    </div>
+    <div class="reminder-item-container">
+      <div class="reminder-item" (click)="onOneMonthClick()">1 month</div>
+    </div>
+    <div class="reminder-item-container">
+      <md-input-container class="reminder-item" floatPlaceholder="never" (keyup.enter)="onCustomDateSubmit($event)">
+        <input mdInput type="date" placeholder="mm/dd/yyyy">
+      </md-input-container>
+    </div>
+  </div>
+</div>
+<div class="reminder-overlay" *ngIf="popoverVisible" (click)="close()"></div>

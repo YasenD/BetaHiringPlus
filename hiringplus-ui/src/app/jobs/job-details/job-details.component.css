@@ -1,0 +1,204 @@
+.job-details-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.job-details-info {
+  padding: 30px;
+  border-bottom: 1px solid #E6E7E7;
+}
+
+.job-details-info, .job-details-candidates-counter {
+  box-sizing: border-box;
+  height: 140px;
+}
+
+.job-left-label {
+  /* width: 160px; */
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.applied-candidates{
+  height: 200px;
+}
+.job-right-label {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  width: 48%;
+  margin: 30px  0px;
+  color: #384470;
+}
+
+.job-details-candidates-counter {
+  background-color: #A79BE5;
+  color: white;
+  font-size: large;
+  border-top-right-radius: 3px;
+  padding: 30px 60px;
+}
+
+.job-details-description, .job-location, .job-salary {
+  padding: 30px;
+}
+
+.job-details-description, .job-salary {
+  border-top: 1px solid #E6E7E7;
+}
+
+.job-location-description, .job-location-attributes {
+  display: inline-block;
+}
+
+.job-location-description {
+  border-right: 1px solid #E6E7E7;
+  padding-right: 10px;
+  margin-right: 5px;
+}
+
+.job-details-description {
+  min-height: 140px;
+  padding: 30px;
+  
+  border-top: 1px solid #E6E7E7;
+}
+span.job-left-label{
+  float:left;
+    
+
+}
+
+
+
+.job-details-left {
+  flex-grow: 1;
+  width: 90%;
+  
+  text-align:  justify;
+  
+}
+
+/* .responsibility {
+
+} */
+
+.job-details-right {
+  border-left: 1px solid #E6E7E7;
+  background-color: #FAFFF8;
+  width: 33%;
+}
+
+.job-details-recommended {
+  margin-top: 20px;
+  padding: 30px;
+  
+}
+
+
+
+
+.shortlisted-list {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.candidate-list{
+  padding: 0px;
+}
+
+.shortlisted-list .recommended-info {
+  margin-left: 8px;
+}
+
+.recommended-info {
+  display: inline-block;
+}
+
+.job-details-recommended-name {
+  color: #47B985;
+}
+
+.job-details-recommended-title{
+
+    background-color: #384470;
+    color: #fff;
+    padding:25px 0px;
+    margin-top: 25px;
+
+}
+
+.recommended-avatar {
+  display: inline-block;
+  border-radius: 50%;
+  background: #ccc;
+  width: 30px;
+  height: 30px;
+}
+
+.details-candidate-list {
+  padding: 30px;
+  font-size: x-large;
+}
+
+.details-candidate-list-header {
+  border-bottom: 1px solid #E6E7E7;
+  height:  79px;
+}
+
+.published {
+  vertical-align: middle;
+  color: #54CA95;
+  margin-bottom: 3px;
+}
+
+.job-list-date {
+  margin-bottom: 10px;
+}
+
+.counter-text {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.counter-number {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.add-job {
+  float: right;
+  background-color: #54CA95;
+  color: white;
+}
+
+.job-list-title {
+  display: inline;
+}
+
+.listing-arrow {
+  color: #54CA95;
+}
+
+.job-details-skill-list {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.candidates-num {
+  font-weight: 900;
+  font-size: 1.8em;
+}
+
+.recom-candidates-num{
+   margin-right: 10px;
+}
+
+.mat-nav-list{
+    margin-left: 20px;
+}
+
+.details-candidate-list{
+    max-height: 400px;
+    min-height: 200px;
+}

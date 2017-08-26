@@ -1,0 +1,208 @@
+.page {
+  background-color: #F5f7fa;
+  width: 100%;
+}
+
+.bak-button {
+  margin: 30px 5% 0 5%;
+}
+
+.bak-button > i {
+  color: #aaa;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bak-button > a {
+  color: #aaa;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.details {
+  background: white;
+  box-shadow: 1px 1px 30px 4px rgba(0, 0, 0, .1);
+  clear: both;
+  display: inline-flex;
+  margin: 0 5% 50px 5%;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.page-left {
+  display: block;
+  padding-bottom: 20px;
+  width: 70%;
+}
+
+.page-left > div {
+  color: #333;
+  padding: 10px 30px;
+}
+
+.page-left > div .title {
+  color: #3abf9c;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.page-left > div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-left > div ul > li {
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.page-left .current-position {
+  margin-top: 10px !important;
+}
+
+.name-location .title {
+  font-size: 23px !important;
+}
+
+.name-location .location {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.contacts > ul > li > .contact-item {
+  color: #bbb;
+  height: 16px;
+  margin-right: 10px;
+  width: 20px;
+}
+
+.work-education-section{
+  padding: 10px 0 !important;
+}
+
+.work-education-section > div {
+  padding: 10px 30px !important;
+}
+
+.work-education-section .items {
+  border-bottom: 1px solid #ccc;
+}
+
+.work-education-section .items > .timesheets {
+  display: inline-block;
+  width: 75%;
+}
+
+.work-education-section .items .timesheets > div {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.work-education-section .items .timesheets .item-title {
+  font-weight: bold;
+}
+
+.work-education-section .items > .logo {
+  display: inline-block;
+  text-align: right;
+  width: 24%;
+}
+
+.work-education-section .items > .logo img {
+  height: 25px;
+}
+
+.page-right {
+  background: #F6F6F6;
+  display: block;
+  width: 30%;
+}
+
+.page-right .notify-section {
+  align-items: center;
+  background: white;
+  height: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 10px;
+}
+
+.page-right .notify-section a {
+  color: #aaa;
+  padding: 0 10px;
+}
+
+.shortlist-tags {
+  max-width: 20%;
+}
+
+.section-shortlist {
+  float: right;
+  width: 36%;
+  margin-right: 10%;
+}
+
+.section-shortlist md-chip.mat-chip {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.section-shortlist .shortlist-select {
+  width: 200px;
+}
+
+.name-location {
+  display: inline-block;
+}
+
+.editable-field {
+  vertical-align: super;
+  width: 15em;
+}
+
+.resume-details,
+.linkedin-details {
+  min-height: 70vh;
+  background: #f5f5f5;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  color: #7c7c7c;
+  position: relative;
+}
+
+.upload-file-container {
+  position: absolute;
+  top: -33px;
+  right: 0;
+}
+
+.upload-browse-button,
+.upload-upload-button {
+  border-radius: 0;
+  height: 32px;
+  color: white;
+}
+
+.upload-browse-button {
+  background: #3abf9c;
+  margin-right: 1px;
+}
+
+.upload-upload-button {
+  background: #7a7b7d;
+}
+
+.upload-file-container .mat-icon,
+.upload-file-container .upload-file-name {
+  vertical-align: middle;
+}
+
+.upload-file-container .mat-icon {
+  cursor: pointer;
+}

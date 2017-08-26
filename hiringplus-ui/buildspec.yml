@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install yarn -g
+  build:
+    commands:
+      - yarn install && yarn global add @angular/cli && ng set --global packageManager=yarn && ng --version && ng build --prod --aot
+
+artifacts:
+  files:
+    - dist/**/*

@@ -1,0 +1,107 @@
+.page {
+  background-color: #F5f7fa;
+  min-height: 800px;
+  height: 100%;
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.title {
+  color: #384470;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 30px 0;
+  text-align: center;
+
+}
+.candidate-row {
+  background: white;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .1);
+  padding: 30px;
+  height: 75px;
+  margin: 10px 0;
+}
+
+.candidate-row > div {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.candidate-row > div > div {
+  color: #565656;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.candidate-row > .reminder-section {
+  padding-top: 10px;
+  position: relative;
+  width: 20px;
+}
+
+.candidate-row > .experience-section {
+  width: 230px;
+  vertical-align: top;
+}
+
+.candidate-row > .experience-section .candidate-name {
+  color: #384470;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.candidate-row > .skill-section {
+  margin-top: 5px;
+  vertical-align: top;
+  width: 290px;
+}
+.candidate-row > .skill-section-all {
+  vertical-align: top;
+  margin-top: 5px;
+  width: 480px;
+}
+
+.candidate-row > .skill-section,.skill-section-all .skills-title {
+  color: #384470;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.candidate-row > .shortlist-section {
+  margin-top: 5px;
+  vertical-align: top;
+  width: 170px;
+}
+
+.candidate-row > .shortlist-section .shortlist-title {
+  color: #384470;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.candidate-row > .shortlist-section .shortlist-item {
+  color: #54b187;
+}
+
+.candidate-row > .email-section {
+  width: 105px;
+  text-align: right;
+}
+
+.candidate-row > .email-section  button.email {
+  font-size: 14px;
+  border: 1px solid #76C891;
+  background-color: #FFFFFF;
+  color: #76C891;
+}
+
+.candidate-list-spinner {
+  margin: 0 auto;
+}
+
+.mat-nav-list {
+  padding: 0 !important;
+}

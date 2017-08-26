@@ -1,0 +1,37 @@
+<div class="job-list-page">
+  <h1 class="job-list-title">Jobs</h1>
+  <div class="job-list-page-header">
+    Show:
+    <md-select class="job-list-select" placeholder="All">
+      <md-option *ngFor="let state of states" [value]="state.code">{{ state.name }}</md-option>
+    </md-select>
+    Sort by:
+    <md-select class="job-list-select" placeholder="Date" [(ngModel)]="sortBy" floatPlaceholder="never">
+      <md-option value="date">Date</md-option>
+      <md-option value="candidates">Candidates</md-option>
+    </md-select>
+    <a [routerLink]="['/add-job']" md-button class="add-job">+ ADD JOB</a>
+  </div>
+
+  <md-nav-list class="job-list">
+    <md-list-item class="job-list-row" (click)="goToJob(job.id)" *ngFor="let job of jobs">
+        <div class="column1">
+          <div class="job-list-info">
+            <div class="job-title"><i class="material-icons">business_center</i>{{job?.jobTitle}}</div>
+            <div class="job-department">{{job?.department}}</div>
+          </div>
+        </div>
+        <div class="column2">
+          <div class="job-list-candidates-number">{{job?.shortlistedCandidates?.length}}</div>
+          <div class="job-list-candidates-label">Candidates</div>
+        </div>
+        <div class="column3">
+          <i class="material-icons published">check_circle</i>
+          <div class="job-list-date">
+              <div>Updated:</div>
+              {{job?.updatedAt | date: 'MM/dd/yyyy'}}
+          </div>
+        </div>
+    </md-list-item>
+  </md-nav-list>
+</div>

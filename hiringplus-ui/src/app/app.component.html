@@ -1,0 +1,21 @@
+<div>
+  <md-toolbar class="toolbar">
+    <img src="../assets/logo.png" class="top-logo"/>
+    <a class="top-link" routerLinkActive="active" [routerLink]="['/welcome']">Home</a>
+    <a *ngIf="currentUser" routerLinkActive="active" class="top-link" [routerLink]="['/user/', currentUser.id, 'candidates']">Candidates</a>
+    <a *ngIf="currentUser" routerLinkActive="active" class="top-link" [routerLink]="['/job/']">Jobs</a>
+    <!--<a *ngIf="currentUser" routerLinkActive="active" class="top-link" [routerLink]="['/reminder/', currentUser.id, 'candidates']">Reminders</a> -->
+    <a *ngIf="currentUser" routerLinkActive="active" class="top-link" [routerLink]="['/about/', currentUser.id, 'candidates']">About</a>
+    <div class="right-link">
+      <a class="top-link" *ngIf="currentUser" (click)="logout()">Logout</a>
+      <a class="top-link search-box">
+        <i class="material-icons">search</i>
+        <input placeholder="Search...">
+      </a>
+    </div>
+  </md-toolbar>
+</div>
+<div class="rest-page">
+  <router-outlet></router-outlet>
+</div>
+

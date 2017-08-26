@@ -1,0 +1,42 @@
+<div class="page">
+  <div class="title">{{title}}</div>
+  <div
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="300"
+      (scrolled)="onScroll()" style="margin-bottom: 100px">
+    <md-nav-list *ngFor="let candidate of candidates">
+      <div disableRipple="true" class=" candidate-row">
+        <div class="reminder-section">
+          <hp-reminder [value]="candidate?.reminder" (newDate)="onNewReminder($event, candidate)"></hp-reminder>
+        </div>
+        <div (click)="getCandidate(candidate?.id)" class="experience-section">
+          <span class="candidate-name">{{candidate?.name}}</span>
+          <div>
+              {{candidate.experienceDetails[0]?.title}} at {{candidate.experienceDetails[0]?.companyName}}
+          </div>
+        </div>
+        <div (click)="getCandidate(candidate?.id)" [ngClass]="candidate.jobs?.length == 0 ? 'skill-section-all' : 'skill-section'">
+          <span class="skills-title">Skills:</span>
+          <div>
+            {{candidate.skills[0]?.name}}, {{candidate.skills[1]?.name}}, {{candidate.skills[2]?.name}}
+          </div>
+        </div>
+        <div (click)="getCandidate(candidate?.id)" class="shortlist-section" *ngIf="candidate.jobs?.length > 0">
+          <span class="shortlist-title">Shortlisted for:</span>
+          <div>
+            <div>- <span class="shortlist-item">{{candidate.jobs[0]?.jobTitle}}</span></div>
+            <div *ngIf="candidate.jobs[1]?.jobTitle">- <span class="shortlist-item">{{candidate.jobs[1]?.jobTitle}}</span></div>
+          </div>
+        </div>
+        <div class="email-section">
+          <button md-button class="email">Email Now</button>
+        </div>
+      </div>
+    </md-nav-list>
+    <md-spinner *ngIf="loadingMoreCandidates" class="candidate-list-spinner"></md-spinner>
+  </div>
+</div>
+
+
+

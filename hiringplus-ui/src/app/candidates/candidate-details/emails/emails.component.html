@@ -1,0 +1,13 @@
+<div class="notes-title">
+  <span class="note-heading">Emails</span>
+</div>
+<div class="email-list">
+  <div class="past-notes" *ngFor="let email of dummyEmails">
+    <span class="past-note-text">{{email?.text}}</span>
+    <span class="past-note-timestamp">{{email?.timestamp}}</span>
+  </div>
+  <div class="past-emails" *ngIf="dummyEmails.length == 0">
+      <span class="center-text">Coming Soon</span>
+  </div>
+</div>
+
