@@ -1,5 +1,6 @@
 {
     "eslint.enable": false,
-    "jshint.enable": false,
-    "tslint.enable": false
+    "jshint.enable": true,
+    "tslint.enable": true,
+    "workbench.iconTheme": "material-icon-theme"
 }
